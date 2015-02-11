@@ -1,0 +1,51 @@
+bp = 768px
+
+html
+  font-size 100%
+  font-family 'Open Sans', sans-serif
+
+body
+  font-size 1rem
+  margin 0
+  padding 0
+
+.tabs
+  margin 0
+  padding 0
+  position relative
+
+.content-wrapper
+  display none
+  background #eee
+  padding 1rem
+
+  @media (min-width: bp)
+    position fixed
+    left 0
+
+.tab
+  list-style-type none
+
+  small
+    font-size 0.6rem
+
+  @media (min-width: bp)
+    float left
+
+  a
+    text-decoration none
+    background #bbb
+    margin 0
+    padding 1rem
+    display inline-block
+    color #999
+    cursor pointer
+
+  &:target
+    a
+      background #888
+      color #ddd
+      display block
+
+    .content-wrapper
+      display block
